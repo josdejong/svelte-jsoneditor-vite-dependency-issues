@@ -1,0 +1,32 @@
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  // Consult https://github.com/sveltejs/svelte-preprocess
+  // for more information about preprocessors
+  preprocess: preprocess(),
+
+  kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: '#svelte',
+
+    // Uncomment the folloing configuration to get svelte-jsoneditor working:
+    // vite: {
+    //   optimizeDeps: {
+    //     include: [
+    //       'ace-builds/src-noconflict/ace',
+    //       'ace-builds/src-noconflict/ext-searchbox',
+    //       'ace-builds/src-noconflict/mode-json',
+    //       'ajv',
+    //       'classnames',
+    //       'debug',
+    //       'diff-sequences',
+    //       'json-source-map',
+    //       'natural-compare-lite'
+    //     ]
+    //   }
+    // }
+  }
+};
+
+export default config;
